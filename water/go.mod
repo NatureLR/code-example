@@ -7,4 +7,4 @@ require (
 	github.com/songgao/water v0.0.0-20200317203138-2b4b6d7c09d8
 )
 
-require golang.org/x/sys v0.0.0-20211015200801-69063c4bb744 // indirect
+require golang.org/x/sys v0.1.0 // indirect
