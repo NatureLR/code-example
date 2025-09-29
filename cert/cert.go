@@ -134,3 +134,12 @@ func GenAllCert() {
 	}
 	fmt.Println(ca, cert, key)
 }
+
+func parseCert(ca []byte) (*x509.Certificate, error) {
+	caBlock, _ := pem.Decode(ca)
+	caDer, err := x509.ParseCertificate(caBlock.Bytes)
+	if err != nil {
+		return nil, err
+	}
+	return caDer, err
+}
